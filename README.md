@@ -12,8 +12,8 @@ Elastic Decision Transformer is a novel Decision Transformer approach that enabl
 
 ```
 @article{wu2023elastic,
-  title={Elastic Decision Transformer},
-  author={Wu, Yueh-Hua and Wang, Xiaolong and Hamaya, Masashi},
+  title={Elastic Decision Mamba},
+  author={Xu, Zhuangtian},
   journal={arXiv preprint arXiv:2307.02484},
   year={2023}
 }
