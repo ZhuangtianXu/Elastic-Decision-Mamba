@@ -50,4 +50,5 @@ python scripts/eval_edt.py --chk_pt_name saved_model_name_from_training.pt
 ```
 
 ## Acknowledgement
-The implementation of EDT is based on [min-decision-transformer](https://github.com/nikhilbarhate99/min-decision-transformer)
+The implementation of EDM is based on [Elastic-DT](https://github.com/kristery/Elastic-DT) and [Mamba](https://github.com/state-spaces/mamba)
+
