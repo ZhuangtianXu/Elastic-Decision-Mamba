@@ -41,12 +41,12 @@ python data/download_d4rl_datasets.py
 
 2. Train the EDT agent
 ```bash
-python scripts/train_edt.py --env hopper --dataset medium-replay
+python scripts/train_edm.py --env hopper --dataset medium-replay
 ```
 
 ## Evaluation
 ```bash
-python scripts/eval_edt.py --chk_pt_name saved_model_name_from_training.pt
+python scripts/eval_edm.py --chk_pt_name saved_model_name_from_training.pt
 ```
 
 ## Acknowledgement
