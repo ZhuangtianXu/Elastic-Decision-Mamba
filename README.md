@@ -1,4 +1,4 @@
-# Elastic Decision Transformer
+# Elastic Decision Mamba
 
 [[Project Page]](https://kristery.github.io/edt/) [[Paper]](https://arxiv.org/abs/2307.02484)
 -----
