@@ -1,0 +1,39 @@
+device set to:  cuda
+model loaded from: dt_runs/hopper_medium-replay_4_4_256_60_0.99_100_24-04-25-06-52-11_500.pt
+here
+1714004510.1103797
+inside
+/root/miniconda3/envs/mujoco/lib/python3.7/site-packages/gym/spaces/box.py:84: UserWarning: [33mWARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+inside
+inside
+inside
+inside
+inside
+inside
+inside
+inside
+inside
+inside
+inside
+inside
+inside
+inside
+inside
+inside
+inside
+inside
+inside
+here
+rs_steps: 2
+time elapsed: 1450.854486465454
+num_eval_ep: 20, max_eval_ep_len: 1000
+{'eval/avg_reward': 2470.7342240112453, 'eval/avg_ep_len': 987.4} 76.53867530256775
+normalized d4rl score: 76.53868
+============================================================
+evaluated on env: hopper-medium-replay-v2
+total num of checkpoints evaluated: 1
+d4rl score mean: 76.53868
+d4rl score std: 0.00000
+d4rl score var: 0.00000
+============================================================

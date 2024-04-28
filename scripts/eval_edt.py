@@ -2,6 +2,9 @@ import os
 import random
 import time
 
+import sys
+sys.path.append("/root/autodl-tmp/EDT/")
+
 import d4rl
 import gym
 import matplotlib.pyplot as plt
@@ -151,8 +154,11 @@ def test(args):
         # evaluate on env
         plt.figure(figsize=(10,6))
         indices_ary = []
-        
+
+
         ts = time.time()
+
+
         rtn = edt_evaluate(
             model,
             device,
@@ -176,6 +182,8 @@ def test(args):
             heuristic=args.heuristic,
             heuristic_delta=args.heuristic_delta,
         )
+
+
         tf = time.time()
         print(f"rs_steps: {rs_steps}")
         print("time elapsed: " + str(tf - ts))

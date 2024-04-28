@@ -2,6 +2,9 @@ import os
 import random
 from datetime import datetime
 
+import sys
+sys.path.append("/root/autodl-tmp/EDT/")
+
 import d4rl
 import gym
 import numpy as np
@@ -9,7 +12,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import wandb
-from decision_transformer.model_mamba import ElasticDecisionMamba
+from decision_transformer.model import ElasticDecisionTransformer
 from decision_transformer.utils import (
     EDTTrajectoryDataset,
     ModelSaver,
@@ -70,6 +73,7 @@ def train(args):
     num_updates_per_iter = args.num_updates_per_iter
     mgdt_sampling = args.mgdt_sampling
 
+
     context_len = args.context_len  # K in decision transformer
     n_blocks = args.n_blocks  # num of transformer blocks
     embed_dim = args.embed_dim  # embedding (hidden) dim of transformer
@@ -98,7 +102,7 @@ def train(args):
     start_time = datetime.now().replace(microsecond=0)
     start_time_str = start_time.strftime("%y-%m-%d-%H-%M-%S")
 
-    prefix = "edm_" + env_d4rl_name + f"_{args.seed}"
+    prefix = "edt_" + env_d4rl_name + f"_{args.seed}"
 
     save_model_name = prefix + "_model_" + start_time_str + ".pt"
     save_model_path = os.path.join(log_dir, save_model_name)
@@ -106,6 +110,15 @@ def train(args):
     log_csv_name = prefix + "_log_" + start_time_str + ".csv"
     log_csv_path = os.path.join(log_dir, log_csv_name)
 
+
+    print("max_train_iters: ", max_train_iters)
+    print("num_updates_per_iter: ", num_updates_per_iter)
+    print("total updates: ", max_train_iters*num_updates_per_iter)
+    print("save_model_name: ", save_model_name)
+    print("save_model_path: ", save_model_path)
+    print("log_csv_name: ",  log_csv_name)
+    print("log_csv_path: ", log_csv_path)
+    
 
     print("=" * 60)
     print("start time: " + start_time_str)
@@ -139,7 +152,7 @@ def train(args):
     state_dim = env.observation_space.shape[0]
     act_dim = env.action_space.shape[0]
 
-    model = ElasticDecisionMamba(
+    model = ElasticDecisionTransformer(
         state_dim=state_dim,
         act_dim=act_dim,
         n_blocks=n_blocks,

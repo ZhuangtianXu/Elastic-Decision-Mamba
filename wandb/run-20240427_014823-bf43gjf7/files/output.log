@@ -1,0 +1,367 @@
+============================================================
+start time: 24-04-27-01-48-27
+============================================================
+device set to: cuda
+dataset path: data/hopper-medium-replay-v2.pkl
+model save path: dt_runs/edm_hopper-medium-replay-v2_100_model_24-04-27-01-48-27.pt
+log csv save path: dt_runs/edm_hopper-medium-replay-v2_100_log_24-04-27-01-48-27.csv
+num of trajs: 2041
+/root/miniconda3/envs/edt/lib/python3.8/site-packages/gym/spaces/box.py:84: UserWarning: [33mWARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+============================================================
+time elapsed: 0:02:03
+num of updates: 1000
+ret loss: 3.34088
+action loss: 0.24192
+state loss: 0.11723
+exp loss: 0.01384
+============================================================
+time elapsed: 0:04:01
+num of updates: 2000
+ret loss: 2.56062
+action loss: 0.18972
+state loss: 0.07341
+exp loss: 0.00212
+============================================================
+time elapsed: 0:06:01
+num of updates: 3000
+ret loss: 2.39906
+action loss: 0.16878
+state loss: 0.06057
+exp loss: 0.00161
+============================================================
+time elapsed: 0:07:58
+num of updates: 4000
+ret loss: 2.24612
+action loss: 0.15094
+state loss: 0.05272
+exp loss: 0.00141
+============================================================
+time elapsed: 0:09:57
+num of updates: 5000
+ret loss: 2.10584
+action loss: 0.13018
+state loss: 0.04488
+exp loss: 0.00126
+============================================================
+time elapsed: 0:11:54
+num of updates: 6000
+ret loss: 1.92780
+action loss: 0.10905
+state loss: 0.03748
+exp loss: 0.00122
+============================================================
+time elapsed: 0:13:52
+num of updates: 7000
+ret loss: 1.72293
+action loss: 0.09140
+state loss: 0.03131
+exp loss: 0.00101
+============================================================
+time elapsed: 0:15:50
+num of updates: 8000
+ret loss: 1.52373
+action loss: 0.07539
+state loss: 0.02590
+exp loss: 0.00099
+============================================================
+time elapsed: 0:17:49
+num of updates: 9000
+ret loss: 1.35117
+action loss: 0.06149
+state loss: 0.02109
+exp loss: 0.00089
+============================================================
+time elapsed: 0:19:49
+num of updates: 10000
+ret loss: 1.20442
+action loss: 0.05097
+state loss: 0.01763
+exp loss: 0.00083
+============================================================
+time elapsed: 0:21:47
+num of updates: 11000
+ret loss: 1.06911
+action loss: 0.04215
+state loss: 0.01441
+exp loss: 0.00081
+============================================================
+time elapsed: 0:23:46
+num of updates: 12000
+ret loss: 0.94268
+action loss: 0.03543
+state loss: 0.01213
+exp loss: 0.00075
+============================================================
+time elapsed: 0:25:45
+num of updates: 13000
+ret loss: 0.82591
+action loss: 0.03068
+state loss: 0.01048
+exp loss: 0.00076
+============================================================
+time elapsed: 0:27:43
+num of updates: 14000
+ret loss: 0.73292
+action loss: 0.02719
+state loss: 0.00915
+exp loss: 0.00074
+============================================================
+time elapsed: 0:29:42
+num of updates: 15000
+ret loss: 0.64865
+action loss: 0.02397
+state loss: 0.00804
+exp loss: 0.00068
+============================================================
+time elapsed: 0:31:42
+num of updates: 16000
+ret loss: 0.58742
+action loss: 0.02179
+state loss: 0.00731
+exp loss: 0.00072
+============================================================
+time elapsed: 0:33:40
+num of updates: 17000
+ret loss: 0.53617
+action loss: 0.02013
+state loss: 0.00667
+exp loss: 0.00061
+============================================================
+time elapsed: 0:35:38
+num of updates: 18000
+ret loss: 0.50354
+action loss: 0.01859
+state loss: 0.00616
+exp loss: 0.00065
+============================================================
+time elapsed: 0:37:38
+num of updates: 19000
+ret loss: 0.47522
+action loss: 0.01763
+state loss: 0.00582
+exp loss: 0.00061
+============================================================
+time elapsed: 0:39:37
+num of updates: 20000
+ret loss: 0.45353
+action loss: 0.01655
+state loss: 0.00539
+exp loss: 0.00062
+============================================================
+time elapsed: 0:41:36
+num of updates: 21000
+ret loss: 0.43434
+action loss: 0.01546
+state loss: 0.00509
+exp loss: 0.00058
+============================================================
+time elapsed: 0:43:35
+num of updates: 22000
+ret loss: 0.42011
+action loss: 0.01476
+state loss: 0.00484
+exp loss: 0.00061
+============================================================
+time elapsed: 0:45:35
+num of updates: 23000
+ret loss: 0.39522
+action loss: 0.01396
+state loss: 0.00457
+exp loss: 0.00054
+============================================================
+time elapsed: 0:47:35
+num of updates: 24000
+ret loss: 0.38508
+action loss: 0.01343
+state loss: 0.00434
+exp loss: 0.00055
+============================================================
+time elapsed: 0:49:34
+num of updates: 25000
+ret loss: 0.37181
+action loss: 0.01279
+state loss: 0.00417
+exp loss: 0.00053
+============================================================
+time elapsed: 0:51:33
+num of updates: 26000
+ret loss: 0.36643
+action loss: 0.01241
+state loss: 0.00400
+exp loss: 0.00047
+============================================================
+time elapsed: 0:53:32
+num of updates: 27000
+ret loss: 0.35464
+action loss: 0.01192
+state loss: 0.00393
+exp loss: 0.00049
+============================================================
+time elapsed: 0:55:30
+num of updates: 28000
+ret loss: 0.34940
+action loss: 0.01152
+state loss: 0.00370
+exp loss: 0.00051
+============================================================
+time elapsed: 0:57:28
+num of updates: 29000
+ret loss: 0.34059
+action loss: 0.01109
+state loss: 0.00363
+exp loss: 0.00055
+============================================================
+time elapsed: 0:59:28
+num of updates: 30000
+ret loss: 0.33020
+action loss: 0.01065
+state loss: 0.00356
+exp loss: 0.00045
+============================================================
+time elapsed: 1:01:26
+num of updates: 31000
+ret loss: 0.32976
+action loss: 0.01026
+state loss: 0.00337
+exp loss: 0.00051
+============================================================
+time elapsed: 1:03:24
+num of updates: 32000
+ret loss: 0.31436
+action loss: 0.00952
+state loss: 0.00311
+exp loss: 0.00048
+============================================================
+time elapsed: 1:05:22
+num of updates: 33000
+ret loss: 0.32210
+action loss: 0.01001
+state loss: 0.00334
+exp loss: 0.00049
+============================================================
+time elapsed: 1:07:20
+num of updates: 34000
+ret loss: 0.32169
+action loss: 0.01103
+state loss: 0.00359
+exp loss: 0.00044
+============================================================
+time elapsed: 1:09:20
+num of updates: 35000
+ret loss: 0.30101
+action loss: 0.00868
+state loss: 0.00315
+exp loss: 0.00047
+============================================================
+time elapsed: 1:11:18
+num of updates: 36000
+ret loss: 0.30352
+action loss: 0.00822
+state loss: 0.00321
+exp loss: 0.00046
+============================================================
+time elapsed: 1:13:17
+num of updates: 37000
+ret loss: 0.31694
+action loss: 0.00832
+state loss: 0.00328
+exp loss: 0.00051
+============================================================
+time elapsed: 1:15:15
+num of updates: 38000
+ret loss: 0.30152
+action loss: 0.00748
+state loss: 0.00255
+exp loss: 0.00050
+============================================================
+time elapsed: 1:17:13
+num of updates: 39000
+ret loss: 0.31694
+action loss: 0.00761
+state loss: 0.00260
+exp loss: 0.00053
+============================================================
+time elapsed: 1:19:11
+num of updates: 40000
+ret loss: 0.32047
+action loss: 0.00858
+state loss: 0.00327
+exp loss: 0.00050
+============================================================
+time elapsed: 1:21:09
+num of updates: 41000
+ret loss: 0.31493
+action loss: 0.00722
+state loss: 0.00258
+exp loss: 0.00054
+============================================================
+time elapsed: 1:23:08
+num of updates: 42000
+ret loss: 0.29672
+action loss: 0.00734
+state loss: 0.00248
+exp loss: 0.00039
+============================================================
+time elapsed: 1:25:06
+num of updates: 43000
+ret loss: 0.44432
+action loss: 0.00723
+state loss: 0.00262
+exp loss: 0.00056
+============================================================
+time elapsed: 1:27:04
+num of updates: 44000
+ret loss: 0.30357
+action loss: 0.00771
+state loss: 0.00389
+exp loss: 0.00047
+============================================================
+time elapsed: 1:29:02
+num of updates: 45000
+ret loss: 0.33118
+action loss: 0.00879
+state loss: 0.00369
+exp loss: 0.00054
+============================================================
+time elapsed: 1:31:00
+num of updates: 46000
+ret loss: 0.30258
+action loss: 0.00727
+state loss: 0.00257
+exp loss: 0.00044
+============================================================
+time elapsed: 1:32:58
+num of updates: 47000
+ret loss: 0.30293
+action loss: 0.00700
+state loss: 0.00249
+exp loss: 0.00048
+============================================================
+time elapsed: 1:34:57
+num of updates: 48000
+ret loss: 0.29386
+action loss: 0.00660
+state loss: 0.00252
+exp loss: 0.00047
+============================================================
+time elapsed: 1:36:56
+num of updates: 49000
+ret loss: 0.29742
+action loss: 0.00667
+state loss: 0.00241
+exp loss: 0.00043
+============================================================
+time elapsed: 1:38:55
+num of updates: 50000
+ret loss: 0.29789
+action loss: 0.00701
+state loss: 0.00265
+exp loss: 0.00046
+============================================================
+finished training!
+============================================================
+started training at: 24-04-27-01-48-27
+finished training at: 24-04-27-03-27-22
+total training time: 1:38:55
+============================================================

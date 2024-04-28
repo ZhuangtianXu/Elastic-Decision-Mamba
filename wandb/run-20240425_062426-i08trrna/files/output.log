@@ -1,0 +1,16 @@
+max_train_iters:  500
+num_updates_per_iter:  100
+total updates:  50000
+save_model_name:  edt_hopper-medium-replay-v2_100_model_24-04-25-06-24-30.pt
+save_model_path:  dt_runs/edt_hopper-medium-replay-v2_100_model_24-04-25-06-24-30.pt
+log_csv_name:  edt_hopper-medium-replay-v2_100_log_24-04-25-06-24-30.csv
+log_csv_path:  dt_runs/edt_hopper-medium-replay-v2_100_log_24-04-25-06-24-30.csv
+============================================================
+start time: 24-04-25-06-24-30
+============================================================
+device set to: cuda
+dataset path: data/hopper-medium-replay-v2.pkl
+model save path: dt_runs/edt_hopper-medium-replay-v2_100_model_24-04-25-06-24-30.pt
+log csv save path: dt_runs/edt_hopper-medium-replay-v2_100_log_24-04-25-06-24-30.csv
+num of trajs: 2041
+/root/miniconda3/envs/mujoco/lib/python3.7/site-packages/gym/spaces/box.py:84: UserWarning: [33mWARN: Box bound precision lowered by casting to float32

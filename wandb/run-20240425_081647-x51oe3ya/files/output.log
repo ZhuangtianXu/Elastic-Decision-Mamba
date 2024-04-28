@@ -1,0 +1,5 @@
+device set to:  cuda
+model loaded from: dt_runs/hopper_medium-replay_4_4_256_60_0.99_100_24-04-25-06-52-11_500.pt
+here
+1714004214.814619
+/root/miniconda3/envs/mujoco/lib/python3.7/site-packages/gym/spaces/box.py:84: UserWarning: [33mWARN: Box bound precision lowered by casting to float32

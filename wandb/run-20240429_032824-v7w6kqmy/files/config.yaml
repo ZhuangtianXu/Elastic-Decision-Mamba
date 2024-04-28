@@ -1,0 +1,159 @@
+wandb_version: 1
+
+batch_size:
+  desc: null
+  value: 256
+expert_weight:
+  desc: null
+  value: 15.0
+env:
+  desc: null
+  value: hopper
+dataset:
+  desc: null
+  value: medium-replay
+rtg_scale:
+  desc: null
+  value: 1000
+max_eval_ep_len:
+  desc: null
+  value: 1000
+num_eval_ep:
+  desc: null
+  value: 20
+dataset_dir:
+  desc: null
+  value: data/
+log_dir:
+  desc: null
+  value: dt_runs/
+context_len:
+  desc: null
+  value: 20
+n_blocks:
+  desc: null
+  value: 4
+embed_dim:
+  desc: null
+  value: 512
+n_heads:
+  desc: null
+  value: 4
+dropout_p:
+  desc: null
+  value: 0.1
+ce_weight:
+  desc: null
+  value: 0.001
+num_bin:
+  desc: null
+  value: 60
+top_percentile:
+  desc: null
+  value: 0.15
+dt_mask:
+  desc: null
+  value: false
+lr:
+  desc: null
+  value: 0.0001
+wt_decay:
+  desc: null
+  value: 0.0001
+warmup_steps:
+  desc: null
+  value: 10000
+max_train_iters:
+  desc: null
+  value: 500
+num_updates_per_iter:
+  desc: null
+  value: 100
+mgdt_sampling:
+  desc: null
+  value: false
+expectile:
+  desc: null
+  value: 0.99
+device:
+  desc: null
+  value: cuda
+seed:
+  desc: null
+  value: 100
+eval_iters:
+  desc: null
+  value: 250
+rs_steps:
+  desc: null
+  value: 2
+state_loss_weight:
+  desc: null
+  value: 1.0
+exp_loss_weight:
+  desc: null
+  value: 0.5
+rs_ratio:
+  desc: null
+  value: 1
+real_rtg:
+  desc: null
+  value: false
+data_ratio:
+  desc: null
+  value: 1.0
+project_name:
+  desc: null
+  value: EDT-experiments
+model_save_iters:
+  desc: null
+  value: 250
+chk_pt_dir:
+  desc: null
+  value: dt_runs/
+chk_pt_name:
+  desc: null
+  value: hopper_medium-replay_4_4_256_60_0.99_100_24-04-27-01-48-27_500.pt
+render:
+  desc: null
+  value: false
+heuristic:
+  desc: null
+  value: false
+heuristic_delta:
+  desc: null
+  value: 1
+_wandb:
+  desc: null
+  value:
+    python_version: 3.8.19
+    cli_version: 0.16.6
+    framework: huggingface
+    huggingface_version: 4.40.1
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1714332504.0
+    t:
+      1:
+      - 1
+      - 11
+      - 41
+      - 49
+      - 55
+      - 63
+      2:
+      - 1
+      - 11
+      - 41
+      - 49
+      - 55
+      - 63
+      3:
+      - 16
+      - 23
+      4: 3.8.19
+      5: 0.16.6
+      6: 4.40.1
+      8:
+      - 5
+      13: linux-x86_64

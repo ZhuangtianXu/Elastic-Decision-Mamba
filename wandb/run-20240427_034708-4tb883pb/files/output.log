@@ -1,0 +1,16 @@
+
+device set to:  cuda
+/root/miniconda3/envs/edt/lib/python3.8/site-packages/gym/spaces/box.py:84: UserWarning: [33mWARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+Traceback (most recent call last):
+  File "scripts/eval_edm.py", line 235, in <module>
+    test(cfg)
+  File "scripts/eval_edm.py", line 150, in test
+    model.load_state_dict(torch.load(eval_chk_pt_path, map_location=device))
+  File "/root/miniconda3/envs/edt/lib/python3.8/site-packages/torch/serialization.py", line 986, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/root/miniconda3/envs/edt/lib/python3.8/site-packages/torch/serialization.py", line 435, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/root/miniconda3/envs/edt/lib/python3.8/site-packages/torch/serialization.py", line 416, in __init__
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'dt_runs/hopper_medium-replay_4_4_256_60_0.99_100_24-0'
