@@ -1,9 +1,7 @@
 # Elastic Decision Mamba
 
-[[Project Page]](https://kristery.github.io/edt/) [[Paper]](https://arxiv.org/abs/2307.02484)
------
 
-[Elastic Decision Transformer](https://kristery.github.io/edt/), Zhuangtian Xu, NeurIPS 2024.
+[Elastic Decision Mamba](https://github.com/ZhuangtianXu/Elastic-Decision-Mamba/), Zhuangtian Xu.
 
 Elastic Decision Transformer is a novel Decision Transformer approach that enables trajectory stitching by adopting different history length. Elastic Decision Mamba replaces the transformer in EDT with the currently popular Mamba state space model architecture.
 
