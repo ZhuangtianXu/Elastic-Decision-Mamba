@@ -14,7 +14,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import wandb
 from decision_transformer.model_mamba import ElasticDecisionMamba
-from decision_transformer.utils import (
+from decision_transformer.utils_edm import (
     edt_evaluate,
     get_d4rl_dataset_stats,
     get_d4rl_normalized_score,
@@ -42,6 +42,8 @@ def save_frames_as_gif(frames, path='./', filename='gym_animation.gif'):
 
  
 def test(args):
+
+    print("seed: ", args.seed)
 
     # seeding
     random.seed(args.seed)
@@ -120,6 +122,7 @@ def test(args):
     env_data_stats = get_d4rl_dataset_stats(env_d4rl_name)
     state_mean = np.array(env_data_stats['state_mean'])
     state_std = np.array(env_data_stats['state_std'])
+
 
     env = gym.make(env_d4rl_name)
 
@@ -233,3 +236,4 @@ if __name__ == "__main__":
     wandb.init(project=args.project_name, config=OmegaConf.to_container(cfg, resolve=True))
 
     test(cfg)
+
