@@ -41,6 +41,7 @@ def train(args):
     expert_weight = args.expert_weight
     exp_loss_weight = args.exp_loss_weight
 
+
     if args.env == "walker2d":
         rtg_target = 5000
         env_d4rl_name = f"walker2d-{dataset}-v2"
@@ -167,6 +168,11 @@ def train(args):
         real_rtg=real_rtg,
     ).to(device)
 
+    if args.train_from_saved != 'None':
+        model_path = args.chk_pt_dir + args.train_from_saved
+        print("Train from saved: ", model_path)
+        model.load_state_dict(torch.load(model_path))
+
     optimizer = torch.optim.AdamW(
         model.parameters(), lr=lr, weight_decay=wt_decay
     )
@@ -176,6 +182,10 @@ def train(args):
     )
 
     total_updates = 0
+
+    patience = 30  
+    best_loss = float('inf')  
+    no_improvement = 0
 
     for i_train_iter in range(1, max_train_iters+1):
 
@@ -374,11 +384,28 @@ def train(args):
             + "\n"
         )
 
+        if mean_action_loss < best_loss:
+            best_loss = mean_action_loss
+            no_improvement = 0
+        else:
+            no_improvement += 1
+        
+        # stop training if not improve over seveal epoches
+        if no_improvement >= patience:
+            print(f"No improvement for {patience} epochs. Stopping training.")
+            model_saver.save_model(model, epoch=i_train_iter, error=mean_action_loss)
+            break
+
+
         if i_train_iter % args.model_save_iters == 0:
             model_saver.save_model(model, epoch=i_train_iter)
         
         if i_train_iter % 10 == 0:
             print(log_str)
+            current_lr = optimizer.param_groups[0]['lr']
+            print("current lr: ", current_lr)
+            print("no improvement: ", no_improvement)
+
 
     print("=" * 60)
     print("finished training!")
