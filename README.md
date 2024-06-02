@@ -3,20 +3,7 @@
 
 [Elastic Decision Mamba](https://github.com/ZhuangtianXu/Elastic-Decision-Mamba/), Zhuangtian Xu.
 
-Elastic Decision Mamba is a novel offline RL approach that incorporating Mamba architecture into EDT.
-
-
-## Bibtex
-
-```
-@article{xu2024elastic,
-  title={Elastic Decision Mamba},
-  author={Xu, Zhuangtian},
-  journal={arXiv preprint arXiv:2307.02484},
-  year={2024}
-}
-```
-
+Elastic Decision Mamba (EDM) is a novel offline RL approach that incorporating Mamba architecture into EDT.
 
 ## Installation
 We prepared a Dockerfile and bash scripts to set up the environment.
