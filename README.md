@@ -3,7 +3,7 @@
 
 [Elastic Decision Mamba](https://github.com/ZhuangtianXu/Elastic-Decision-Mamba/), Zhuangtian Xu.
 
-Elastic Decision Transformer is a novel Decision Transformer approach that enables trajectory stitching by adopting different history length. Elastic Decision Mamba replaces the transformer in EDT with the currently popular Mamba state space model architecture.
+Elastic Decision Mamba is a novel offline RL approach that incorporating Mamba architecture into EDT.
 
 
 ## Bibtex
