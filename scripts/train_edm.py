@@ -13,7 +13,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import wandb
 from decision_transformer.model_mamba import ElasticDecisionMamba
-from decision_transformer.utils import (
+from decision_transformer.utils_edm import (
     EDTTrajectoryDataset,
     ModelSaver,
     encode_return,
@@ -24,6 +24,8 @@ from omegaconf import OmegaConf
 
 
 def train(args):
+
+    print("seed: ", args.seed)
 
     scaler = torch.cuda.amp.GradScaler()
     model_saver = ModelSaver(args)
@@ -64,6 +66,7 @@ def train(args):
     num_eval_ep = args.num_eval_ep  # num of evaluation episodes
 
     batch_size = args.batch_size  # training batch size
+    print("batch size: ", batch_size)
     lr = args.lr  # learning rate
     wt_decay = args.wt_decay  # weight decay
     warmup_steps = args.warmup_steps  # warmup steps for lr scheduler
@@ -165,7 +168,12 @@ def train(args):
         optimizer, lambda steps: min((steps + 1) / warmup_steps, 1)
     )
 
+
     total_updates = 0
+
+    patience = 30  
+    best_loss = float('inf')  
+    no_improvement = 0
 
     for i_train_iter in range(1, max_train_iters+1):
 
@@ -186,7 +194,9 @@ def train(args):
                     rewards_u,
                     traj_mask_u,
                 ) = next(data_iter_u)
+        
             except StopIteration:
+                
                 data_iter_u = iter(traj_data_loader_u)
                 (
                     timesteps_u,
@@ -207,6 +217,7 @@ def train(args):
             )  # B x T x 1
             rewards_u = rewards_u.to(device).unsqueeze(dim=-1)  # B x T x 1
             traj_mask_u = traj_mask_u.to(device)  # B x T
+
 
             with torch.autocast(device_type="cuda", dtype=torch.float16):
 
@@ -362,13 +373,34 @@ def train(args):
             + "exp loss: "
             + format(mean_expectile_loss, ".5f")
             + "\n"
+            + "edm loss: "
+            + format(edt_loss, ".5f")
+            + "\n"
         )
+
+
+
+        if mean_action_loss < best_loss:
+            best_loss = mean_action_loss
+            no_improvement = 0
+        else:
+            no_improvement += 1
+        
+        # stop training if not improve over several epoches
+        if no_improvement >= patience:
+            print(f"No improvement for {patience} epochs. Stopping training.")
+            model_saver.save_model(model, epoch=i_train_iter)
+            break
 
         if i_train_iter % args.model_save_iters == 0:
             model_saver.save_model(model, epoch=i_train_iter)
         
         if i_train_iter % 10 == 0:
             print(log_str)
+            current_lr = optimizer.param_groups[0]['lr']
+            print("current lr: ", current_lr)
+            print("no improvement: ", no_improvement)
+
 
     print("=" * 60)
     print("finished training!")
