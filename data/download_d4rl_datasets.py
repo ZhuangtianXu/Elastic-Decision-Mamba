@@ -18,7 +18,7 @@ def download_d4rl_data():
         os.makedirs(data_dir)
 
     for env_name in ['halfcheetah', 'hopper', 'walker2d', 'ant']:
-        for dataset_type in ['medium', 'medium-replay']:
+        for dataset_type in ['medium', 'medium-replay', 'medium-expert']:
 
             name = f'{env_name}-{dataset_type}-v2'
             pkl_file_path = os.path.join(data_dir, name)
